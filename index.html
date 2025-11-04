@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Itixa Talaviya | Computer Vision & AI Engineer</title>
+  <meta name="description" content="Portfolio of Itixa Talaviya — Computer Vision & AI Engineer. Projects: UAV precision landing, object detection, cultural routes web app. Skills: Python, OpenCV, YOLO, TensorFlow, PyTorch, Flask, MongoDB." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f1221;
+      --card: #14182b;
+      --muted: #aab0cf;
+      --text: #e9ecff;
+      --acc: #75e0a3;
+      --acc2: #8ab4ff;
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body { margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background: radial-gradient(1200px 800px at 80% -10%, rgba(138,180,255,.25), transparent 60%), var(--bg); color: var(--text); }
+    a { color: var(--acc2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Header */
+    .nav {
+      position: sticky; top: 0; z-index: 50; backdrop-filter: blur(12px);
+      background: linear-gradient(180deg, rgba(15,18,33,.85), rgba(15,18,33,.55));
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: .8rem 1rem; display: flex; align-items: center; justify-content: space-between; }
+    .brand { font-weight: 800; letter-spacing: .2px; }
+    .nav a { margin-left: 1rem; font-weight: 600; opacity: .9; }
+
+    .hero { max-width: 1100px; margin: 2.5rem auto 1.5rem; padding: 0 1rem; display: grid; grid-template-columns: 120px 1fr; gap: 1.2rem; align-items: center; }
+    .avatar { width: 110px; height: 110px; border-radius: 50%; border: 2px solid rgba(255,255,255,.15); background: url('avatar.jpg') center/cover no-repeat, linear-gradient(135deg, #2a3056, #1a1f3b); }
+    .title h1 { margin: 0 0 .4rem; font-size: 1.9rem; }
+    .title p { margin: 0; color: var(--muted); }
+
+    .chip { display: inline-flex; align-items: center; gap: .5rem; padding: .45rem .7rem; border-radius: 999px; background: rgba(117,224,163,.12); color: #b7f1cf; border: 1px solid rgba(117,224,163,.25); font-weight: 600; font-size: .85rem; }
+    .stack { margin-top: .8rem; display: flex; flex-wrap: wrap; gap: .5rem; }
+
+    /* Sections */
+    section { max-width: 1100px; margin: 1.2rem auto; padding: 0 1rem; }
+    .card { background: linear-gradient(180deg, rgba(20,24,43,.95), rgba(20,24,43,.75)); border: 1px solid rgba(255,255,255,.08); border-radius: var(--radius); padding: 1.2rem; box-shadow: 0 10px 40px rgba(0,0,0,.25); }
+    h2 { margin: 0 0 1rem; font-size: 1.4rem; letter-spacing: .2px; }
+    .grid { display: grid; gap: 1rem; }
+    @media (min-width: 860px) { .grid.two { grid-template-columns: 1fr 1fr; } .grid.three { grid-template-columns: repeat(3, 1fr); } }
+
+    .kpi { display: flex; gap: .8rem; align-items: center; padding: .6rem .8rem; background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.08); border-radius: 12px; }
+    .kpi i { color: var(--acc); }
+
+    .proj { padding: 1rem; border: 1px solid rgba(255,255,255,.08); border-radius: 14px; background: rgba(255,255,255,.02); }
+    .proj h3 { margin: 0 0 .35rem; font-size: 1.1rem; }
+    .proj p { margin: 0 0 .6rem; color: var(--muted); }
+    .proj .links a { margin-right: .8rem; }
+
+    ul.clean { padding-left: 1.1rem; line-height: 1.8; }
+    .muted { color: var(--muted); }
+
+    footer { text-align: center; padding: 2rem 1rem 4rem; color: var(--muted); }
+    .btn { display:inline-flex; align-items:center; gap:.5rem; padding:.6rem .9rem; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.04); font-weight:700; }
+    .btn:hover{ background:rgba(255,255,255,.07); text-decoration:none; }
+
+    .pill { border:1px solid rgba(255,255,255,.12); padding:.25rem .6rem; border-radius:999px; font-size:.8rem; color:var(--muted); }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">Itixa Talaviya</div>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="avatar" title="Add your photo as avatar.jpg"></div>
+    <div class="title">
+      <h1>Computer Vision & AI Engineer</h1>
+      <p>Focused on real‑time perception, medical imaging, and robotics. Python • OpenCV • YOLO • TensorFlow • PyTorch.</p>
+      <div class="stack">
+        <span class="chip"><i class="fa-solid fa-robot"></i> UAV Tracking</span>
+        <span class="chip"><i class="fa-solid fa-brain"></i> Medical Imaging</span>
+        <span class="chip"><i class="fa-solid fa-globe"></i> Web + Cloud AI</span>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="grid two">
+    <div class="card">
+      <h2>About</h2>
+      <p class="muted">I build practical AI systems that see and decide in real time. My work spans <strong>computer vision for robotics</strong>, <strong>medical image analysis</strong>, and <strong>AI‑driven web applications</strong>. I enjoy turning research ideas into reliable products with clean engineering and thoughtful UX.</p>
+      <div style="margin-top:.8rem; display:flex; gap:.6rem; flex-wrap:wrap;">
+        <a class="btn" href="ItixaTalaviya-CV.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> View CV</a>
+        <a class="btn" href="https://github.com/itixa" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/itixa-talaviya-5784aa164/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <span class="pill"><i class="fa-solid fa-location-dot"></i> Chemnitz, Germany</span>
+        <span class="pill"><i class="fa-solid fa-language"></i> EN • DE (B1)</span>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="kpi"><i class="fa-solid fa-microchip"></i> <div><strong>Real‑time CV</strong><div class="muted">OpenCV • ArUco • SLAM basics</div></div></div>
+      <div class="kpi"><i class="fa-solid fa-heart-pulse"></i> <div><strong>Model Explainability</strong><div class="muted">Grad‑CAM for medical AI</div></div></div>
+      <div class="kpi"><i class="fa-solid fa-diagram-project"></i> <div><strong>Web + Data</strong><div class="muted">Flask • Node • MongoDB • Dash</div></div></div>
+    </div>
+  </section>
+
+  <section id="experience" class="card">
+    <h2>Experience & Research</h2>
+    <div class="grid">
+      <div class="proj">
+        <h3>Johannes Gutenberg‑Universität Mainz — Research (2024–2025)</h3>
+        <p>Built a CNN‑based system for <strong>heart‑disease prediction</strong> on medical images. Applied <strong>Grad‑CAM</strong> to produce interpretable heatmaps and supported research on ethical AI in diagnosis.</p>
+        <p class="muted">Python · PyTorch · Explainable AI</p>
+      </div>
+      <div class="proj">
+        <h3>Technische Universität Chemnitz — Python/ML Intern (Sep 2023–Feb 2024)</h3>
+        <p>Real‑time object detection for autonomous vehicles using <strong>YOLO</strong>. Trained on curated datasets and evaluated for robustness across conditions.</p>
+        <p class="muted">YOLO · OpenCV · Google Colab</p>
+      </div>
+      <div class="proj">
+        <h3>Maxgen Technology — ML Intern (2019–2020)</h3>
+        <p>Face‑recognition‑based attendance system to replace manual processes and improve efficiency.</p>
+        <p class="muted">Python · OpenCV</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="card">
+    <h2>Selected Projects</h2>
+    <div class="grid two">
+      <div class="proj">
+        <h3>UAV Precision Landing via Vision Tracking</h3>
+        <p>Landing system using <strong>ArUco markers</strong> with real‑time 3D pose and MAVLink integration to Pixhawk. Demonstrated simulated and real tests with high accuracy.</p>
+        <p class="muted">Python · OpenCV · Pymavlink · Sensor Fusion</p>
+        <div class="links">
+          <a href="https://colab.research.google.com/drive/1YVCyV9RJLDtP8xLPPG5i7Efvl4P2c3PE?usp=drive_link" target="_blank" rel="noopener">Colab Notebook</a>
+        </div>
+      </div>
+      <div class="proj">
+        <h3>Autonomous‑Driving Object Detection</h3>
+        <p>YOLO models for cars, bicycles, and traffic lights; trained on Kaggle data and optimized for real‑time performance.</p>
+        <p class="muted">YOLO · PyTorch · OpenCV</p>
+        <div class="links">
+          <a href="https://github.com/itixa/object_detection" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </div>
+      <div class="proj">
+        <h3>Chemnitz Cultural Routes Web App</h3>
+        <p>Full‑stack app to explore city routes with <strong>Leaflet</strong> maps and Overpass API; routes, favorites and history saved in MongoDB. Dashboard with <strong>Dash + Plotly</strong>.</p>
+        <p class="muted">Node · Express · MongoDB · Dash · Plotly</p>
+        <div class="links">
+          <a href="https://github.com/itixa/chemnitz-dash" target="_blank" rel="noopener">Repo</a>
+        </div>
+      </div>
+      <div class="proj">
+        <h3>Deep‑Learning Training Utilities</h3>
+        <p>Reusable utilities and scripts for model training and evaluation.</p>
+        <p class="muted">Python · PyTorch</p>
+        <div class="links">
+          <a href="https://github.com/itixa/iti/blob/main/train.py" target="_blank" rel="noopener">train.py</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="card">
+    <h2>Education</h2>
+    <ul class="clean">
+      <li><strong>M.Tech, Web Engineering</strong> — Technische Universität Chemnitz, 2025–2027 (expected)</li>
+      <li><strong>M.Tech, Automotive Software Engineering</strong> — Technische Universität Chemnitz, 2022–2025</li>
+      <li><strong>B.Tech, Computer Engineering</strong> — Gujarat Technological University, 2016–2020</li>
+    </ul>
+  </section>
+
+  <section id="skills" class="card">
+    <h2>Skills</h2>
+    <div class="grid three">
+      <div>
+        <h3 class="muted">Languages & Tools</h3>
+        <ul class="clean">
+          <li>Python, SQL, C/C++, JavaScript, .NET Core</li>
+          <li>Linux, Git/GitHub, VS Code, Jupyter/Colab</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="muted">ML / CV</h3>
+        <ul class="clean">
+          <li>OpenCV, YOLO, TensorFlow, PyTorch</li>
+          <li>Grad‑CAM, Explainability, CNN/RNN</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="muted">Data & Web</h3>
+        <ul class="clean">
+          <li>Flask, Node, Express</li>
+          <li>MongoDB, PowerBI, Matplotlib/Plotly</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="certs" class="card">
+    <h2>Certificates (selected)</h2>
+    <ul class="clean">
+      <li>AIML Workshop: Building an AI‑Enabled Face Mask Detector</li>
+      <li>Advanced Analytics • Analytics for Beginners</li>
+      <li>C/C++ • Math Survivors • X‑IT Quiz</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="card">
+    <h2>Contact</h2>
+    <p>Open to AI/ML roles and research collaborations.</p>
+    <p class="muted"><i class="fa-solid fa-envelope"></i> <a href="mailto:37lakhmi@gmail.com">37lakhmi@gmail.com</a> &nbsp;·&nbsp; <i class="fa-brands fa-github"></i> <a href="https://github.com/itixa" target="_blank" rel="noopener">github.com/itixa</a> &nbsp;·&nbsp; <i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/itixa-talaviya-5784aa164/" target="_blank" rel="noopener">LinkedIn</a></p>
+  </section>
+
+  <footer>
+    © <span id="y"></span> Itixa Talaviya — Built with GitHub Pages.
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        const el = document.querySelector(id);
+        if (el) { e.preventDefault(); el.scrollIntoView({behavior: 'smooth', block: 'start'}); }
+      });
+    });
+  </script>
+</body>
+</html>
